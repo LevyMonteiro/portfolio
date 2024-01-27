@@ -1,6 +1,21 @@
 import { Moon, Sun } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Nav() {
+  const [theme, setTheme] = useState(
+    localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark'
+  );
+
+  function toggleTheme() {
+    if (theme === 'dark') {
+      setTheme('light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      setTheme('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+
   return (
     <nav className='bg-neutral-900 w-full fixed top-0 left-0 flex justify-center'>
       <div className='w-[1168px] h-16 gap-8 flex flex-row justify-between items-center text-center text-lg'>
@@ -35,8 +50,10 @@ export default function Nav() {
             </a>
           </li>
 
-          <li className='flex justify-center items-center'>
-            {<Sun /> || <Moon />}
+          <li className='flex justify-center items-center hover:text-violet-400'>
+            <button onClick={toggleTheme}>
+              {theme === 'dark' ? <Moon /> : <Sun />}
+            </button>
           </li>
         </ul>
       </div>
