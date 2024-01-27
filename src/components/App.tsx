@@ -1,6 +1,9 @@
-function App() {
+import Nav from './Nav';
+
+export default function App() {
   return (
     <>
+      <Nav />
       <section id='home' className='w-full h-screen flex gap-12'>
         <div
           id='home__description'
@@ -56,5 +59,3 @@ function App() {
     </>
   );
 }
-
-export default App;
