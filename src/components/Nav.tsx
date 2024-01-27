@@ -6,9 +6,10 @@ export default function Nav() {
       <div className='w-[1168px] h-16 gap-8 flex flex-row justify-between items-center text-center text-lg'>
         <a
           href='#home'
-          className='text-xl font-bold w-24 h-full flex items-center hover:text-violet-400 '
+          className='text-xl font-bold w-24 h-full flex items-center hover:text-violet-400'
         >
-          Levy<span className='animate-blinking'>_</span>
+          Levy
+          <span className='animate-blinking'>_</span>
         </a>
 
         <ul className='flex h-full gap-8'>
