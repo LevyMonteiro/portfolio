@@ -1,10 +1,9 @@
 import { Moon, Sun } from 'lucide-react';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 export default function Nav() {
-  const [theme, setTheme] = useState(
-    localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark'
-  );
+  const { theme, setTheme } = useContext(ThemeContext);
 
   function toggleTheme() {
     if (theme === 'dark') {
@@ -17,7 +16,11 @@ export default function Nav() {
   }
 
   return (
-    <nav className='bg-neutral-900 w-full fixed top-0 left-0 flex justify-center'>
+    <nav
+      className={`${
+        theme === 'light' ? 'bg-neutral-50' : 'bg-neutral-900'
+      } w-full fixed top-0 left-0 flex justify-center`}
+    >
       <div className='w-[1168px] h-16 gap-8 flex flex-row justify-between items-center text-center text-lg'>
         <a
           href='#home'

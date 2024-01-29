@@ -1,4 +1,14 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
+
 export default function Home() {
+  const { theme } = useContext(ThemeContext);
+
+  const body = document.querySelector('body');
+  theme === 'light'
+    ? body?.classList.add('bg-white')
+    : body?.classList.remove('bg-white');
+
   return (
     <>
       <section id='home' className='w-full h-screen flex gap-12'>
