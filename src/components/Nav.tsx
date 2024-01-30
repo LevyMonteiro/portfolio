@@ -16,12 +16,12 @@ export default function Nav() {
   }
 
   return (
-    <nav
+    <header
       className={`${
-        theme === 'light' ? 'bg-neutral-50 text-black' : 'bg-neutral-900'
-      } w-full fixed top-0 left-0 flex justify-center`}
+        theme === 'light' ? 'bg-neutral-50 text-black' : 'bg-black'
+      } w-full fixed top-0 left-0 flex justify-center z-10 opacity-90`}
     >
-      <div className='w-full h-16 mx-72 gap-8 flex flex-row justify-between items-center text-center text-lg'>
+      <nav className='w-full h-16 mx-72 gap-8 flex flex-row justify-between items-center text-center text-lg'>
         <a
           href='#home'
           className='text-2xl font-shadowintolight font-bold h-full flex items-center group'
@@ -85,7 +85,7 @@ export default function Nav() {
             </button>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
