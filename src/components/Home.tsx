@@ -6,8 +6,8 @@ export default function Home() {
 
   const body = document.querySelector('body');
   theme === 'light'
-    ? body?.classList.add('bg-white')
-    : body?.classList.remove('bg-white');
+    ? body?.classList.add('bg-neutral-50')
+    : body?.classList.remove('bg-neutral-50');
 
   return (
     <>
@@ -16,17 +16,32 @@ export default function Home() {
           id='home__description'
           className='flex flex-col justify-center gap-4 w-[600px]'
         >
-          <h1 className='text-4xl '>
-            <span className='opacity-90 text-neutral-200 font-semibold'>
+          <h1 className='text-4xl'>
+            <span
+              className={`${
+                theme === 'light'
+                  ? 'text-neutral-800'
+                  : 'opacity-90 text-neutral-200'
+              }`}
+            >
               Hi there i'm{' '}
             </span>
-            <span className='opacity-95 font-bold'>Levy</span>
+            <span
+              className={`${
+                theme === 'light' ? 'text-neutral-900' : ''
+              } opacity-95 font-medium`}
+            >
+              Levy Monteiro
+            </span>
           </h1>
-          <p className='font-poppins text-8xl opacity-90 text-violet-400 relative -left-[6px]'>
+          <p className='font-poppins text-8xl text-violet-600 relative -left-[6px]'>
             Front-end Developer
           </p>
-
-          <p className='text-2xl text-neutral-200'>
+          <p
+            className={`${
+              theme === 'light' ? 'text-neutral-800' : ''
+            } text-3xl text-neutral-200 text-balance`}
+          >
             Passionate about tech and learning new things, specialised in web
             design.
           </p>

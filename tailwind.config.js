@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        shadowintolight: ['shadowsintolight', 'sans-serif'],
       },
       keyframes: {
         blinking: {
@@ -21,7 +22,7 @@ export default {
         },
       },
       animation: {
-        blinking: 'blinking 1s infinite',
+        blinking: 'blinking 1.5s infinite',
       },
     },
   },
