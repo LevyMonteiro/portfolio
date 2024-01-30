@@ -1,6 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
   @font-face {
     font-family: 'shadowsintolight';
@@ -19,6 +17,6 @@
 
   @layer components {
     body {
-      @apply w-screen h-screen flex justify-center items-center overflow-x-hidden scroll-smooth bg-neutral-900 text-white font-inter;
+      @apply w-screen flex justify-center items-center overflow-x-hidden scroll-smooth bg-black text-white font-inter;
     }
   }
