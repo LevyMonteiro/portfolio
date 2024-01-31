@@ -21,7 +21,7 @@ export default function Nav() {
         theme === 'light' ? 'bg-neutral-50 text-black' : 'bg-black'
       } w-full fixed top-0 left-0 flex justify-center z-10 opacity-90`}
     >
-      <nav className='w-full h-16 mx-72 gap-8 flex flex-row justify-between items-center text-center text-lg'>
+      <nav className='w-full h-16 mx-60 gap-8 flex flex-row justify-between items-center text-center text-lg'>
         <a
           href='#home'
           className='text-2xl font-shadowintolight font-bold h-full flex items-center group'
@@ -53,7 +53,6 @@ export default function Nav() {
           >
             /&gt;
           </span>
-          {/* <span className='animate-blinking'>_</span> */}
         </a>
 
         <ul className='flex h-full gap-8'>
