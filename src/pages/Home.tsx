@@ -5,9 +5,12 @@ export default function Home() {
   const { theme } = useContext(ThemeContext);
 
   const body = document.querySelector('body');
-  theme === 'light'
-    ? body?.classList.add('bg-neutral-50')
-    : body?.classList.remove('bg-neutral-50');
+  if (theme === 'light') {
+    body?.classList.add('bg-neutral-50', 'text-black');
+  } else {
+    body?.classList.remove('bg-neutral-50', 'text-black');
+    body?.classList.add('bg-black', 'text-white');
+  }
 
   return (
     <section
@@ -37,7 +40,7 @@ export default function Home() {
 
             <span
               className={`${
-                theme === 'light' ? 'text-neutral-900' : ''
+                theme === 'light' ? 'text-neutral-900' : 'text-white'
               } opacity-95 font-medium`}
             >
               Levy Monteiro

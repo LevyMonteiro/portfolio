@@ -55,7 +55,7 @@ export default function Nav() {
           </span>
         </a>
 
-        <ul className='flex h-full gap-8'>
+        <ul className='flex h-full gap-8 font-medium'>
           <li className='flex justify-center items-center'>
             <a href='#about' className=' hover:text-violet-600 justify-center'>
               About

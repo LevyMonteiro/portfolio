@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import Card from '../components/Card';
+import { ThemeContext } from '../context/ThemeContext';
 
 export default function About() {
+  const { theme } = useContext(ThemeContext);
+
   const skills: string[] = [
     'HTML & CSS',
     'JavaScript',
@@ -21,7 +25,9 @@ export default function About() {
   return (
     <section
       id='about'
-      className='w-screen flex justify-center bg-neutral-950 py-32 px-60'
+      className={`${
+        theme === 'light' ? 'bg-violet-800' : 'bg-neutral-950'
+      } w-screen flex justify-center py-32 px-60`}
     >
       <div
         id='about-container'
@@ -29,9 +35,13 @@ export default function About() {
       >
         <div
           id='description'
-          className='h-full font-poppins flex flex-col gap-8'
+          className='h-full font-poppins flex flex-col gap-7'
         >
-          <h2 className='text-4xl text-center font-semibold'>
+          <h2
+            className={`${
+              theme === 'light' ? 'text-white' : ''
+            } text-4xl font-semibold text-center`}
+          >
             Nice to meet you!
           </h2>
 
@@ -58,9 +68,15 @@ export default function About() {
           id='skills'
           className='h-full text-center font-poppins flex flex-col gap-8'
         >
-          <h2 className='text-4xl font-semibold'>My Skills</h2>
+          <h2
+            className={`${
+              theme === 'light' ? 'text-white' : ''
+            } text-4xl font-semibold`}
+          >
+            My Skills
+          </h2>
 
-          <p className='text-center text-neutral-300'>
+          <p className='text-center text-neutral-300 mb-2'>
             Some skills and technologies I’ve been working with recently:
           </p>
 
