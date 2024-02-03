@@ -63,7 +63,7 @@ export default function Nav() {
           </li>
           <li className='flex justify-center items-center'>
             <a
-              href='#projetcs'
+              href='#projects'
               className=' hover:text-violet-600 justify-center'
             >
               Projects

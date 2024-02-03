@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import Card from '../components/Card';
+import Card from './Card';
 import { ThemeContext } from '../context/ThemeContext';
 
 export default function About() {

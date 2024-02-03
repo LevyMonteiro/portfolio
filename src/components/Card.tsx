@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
-export default function Card({ skill }) {
+export default function Card({ skill }: { skill: string }) {
   const { theme } = useContext(ThemeContext);
 
   return (

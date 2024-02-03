@@ -86,7 +86,11 @@ export default function Home() {
               -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z'
               />
 
-              <image href='src/assets/me.png' width={'100%'} height={'106%'} />
+              <image
+                href='src/assets/blob-img.png'
+                width={'100%'}
+                height={'106%'}
+              />
             </g>
           </svg>
         </div>
