@@ -25,8 +25,8 @@ export default function Projects() {
     >
       <h2
         className={`${
-          theme === 'light' ? 'text-black' : ''
-        } text-4xl font-bold -mb-10 `}
+          theme === 'light' ? 'text-neutral-900' : ''
+        } text-4xl -mb-10 font-poppins font-semibold`}
       >
         Projects
       </h2>
@@ -47,6 +47,15 @@ export default function Projects() {
           <Project info={projectInfo} key={projectInfo.id} />
         ))}
       </div>
+
+      <a
+        href='https://github.com/LevyMonteiro?tab=repositories'
+        className={`${
+          theme === 'light' ? 'bg-violet-600' : 'bg-neutral-600'
+        } px-8 py-2 rounded-[3px] text-lg`}
+      >
+        See All
+      </a>
     </section>
   );
 }
