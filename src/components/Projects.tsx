@@ -1,20 +1,10 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
-import Project from './Project';
+import { ProjectsContext } from '../context/ProjectsContext';
+import ProjectCard from './ProjectCard';
 
 export default function Projects() {
-  const projectsInfo = [
-    {
-      id: 'Random Quote Machine',
-      img: 'src/assets/img/random-quote-machine.png',
-      link: '',
-    },
-    { id: 'Social Tree', img: 'src/assets/img/social-tree.png', link: '' },
-    { id: 'Landing Page', img: 'src/assets/img/landing-page.png', link: '' },
-    { id: 'Drum Machine', img: 'src/assets/img/drum-machine.png', link: '' },
-    { id: 'Timer', img: 'src/assets/img/timer.png', link: '' },
-    { id: 'Calculator', img: 'src/assets/img/calculator.png', link: '' },
-  ];
+  const { projectsData } = useContext(ProjectsContext);
 
   const { theme } = useContext(ThemeContext);
 
@@ -43,15 +33,22 @@ export default function Projects() {
         id='projects-container'
         className='w-[1184px] grid grid-cols-3 gap-7'
       >
-        {projectsInfo.map((projectInfo) => (
-          <Project info={projectInfo} key={projectInfo.id} />
+        {projectsData.map((projectData: any) => (
+          <ProjectCard
+            key={projectData.id}
+            id={projectData.id}
+            img={projectData.img}
+          />
         ))}
       </div>
 
       <a
         href='https://github.com/LevyMonteiro?tab=repositories'
+        target='_blank'
         className={`${
-          theme === 'light' ? 'bg-violet-600' : 'bg-neutral-600'
+          theme === 'light'
+            ? 'bg-violet-600 hover:bg-opacity-90'
+            : 'bg-neutral-600 hover:brightness-110'
         } px-8 py-2 rounded-[3px] text-lg`}
       >
         See All
