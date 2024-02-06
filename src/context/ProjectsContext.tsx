@@ -1,9 +1,10 @@
 import { createContext } from 'react';
 
 type ProjectContextProps = {
+  map: any;
   id: string;
   img: string;
-  link: string;
+  route: string;
   skills: string[];
   deploy: string;
   repo: string;
@@ -14,7 +15,7 @@ const projectsData: ProjectContextProps = [
   {
     id: 'Random Quote Machine',
     img: 'src/assets/img/random-quote-machine.png',
-    link: '',
+    route: './random-quote-machine',
     skills: ['HTML', 'CSS', 'Javascript', 'React', 'Sass', 'API'],
     deploy: 'https://random-quote-machine-levymonteiro.vercel.app/',
     repo: 'https://github.com/LevyMonteiro/random-quote-machine',
@@ -23,7 +24,7 @@ const projectsData: ProjectContextProps = [
   {
     id: 'Social Tree',
     img: 'src/assets/img/social-tree.png',
-    link: '',
+    route: './social-tree',
     skills: ['HTML', 'CSS', 'Javascript', 'Vite', 'React', 'Tailwind'],
     deploy: 'https://social-tree-levymonteiro.vercel.app/',
     repo: 'https://github.com/LevyMonteiro/social-tree',
@@ -32,7 +33,7 @@ const projectsData: ProjectContextProps = [
   {
     id: 'Landing Page',
     img: 'src/assets/img/landing-page.png',
-    link: '',
+    route: './landing-page',
     skills: ['HTML', 'CSS'],
     deploy: 'https://levymonteiro.github.io/landing-page/',
     repo: 'https://github.com/LevyMonteiro/landing-page',
@@ -41,7 +42,7 @@ const projectsData: ProjectContextProps = [
   {
     id: 'Drum Machine',
     img: 'src/assets/img/drum-machine.png',
-    link: '',
+    route: './drum-machine',
     skills: ['HTML', 'CSS', 'Javascript', 'Vite', 'React', 'Tailwind'],
     deploy: 'https://drum-machine-levymonteiro.vercel.app/',
     repo: 'https://github.com/LevyMonteiro/drum-machine',
@@ -50,7 +51,7 @@ const projectsData: ProjectContextProps = [
   {
     id: 'Timer',
     img: 'src/assets/img/timer.png',
-    link: '',
+    route: './timer',
     skills: [
       'HTML',
       'CSS',
@@ -69,8 +70,8 @@ const projectsData: ProjectContextProps = [
   {
     id: 'Calculator',
     img: 'src/assets/img/calculator.png',
-    link: '',
-    skills: [],
+    route: './calculator',
+    skills: ['HTML', 'CSS', 'Javascript', 'Vite', 'React', 'Tailwind'],
     deploy: 'https://calculator-levymonteiro.vercel.app/',
     repo: 'https://github.com/LevyMonteiro/calculator',
     demo: 'https://private-user-images.githubusercontent.com/102385102/270815065-eb497cc1-6f78-458f-ac40-d0ce902fff0e.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcxNTg0MDksIm5iZiI6MTcwNzE1ODEwOSwicGF0aCI6Ii8xMDIzODUxMDIvMjcwODE1MDY1LWViNDk3Y2MxLTZmNzgtNDU4Zi1hYzQwLWQwY2U5MDJmZmYwZS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjA1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwNVQxODM1MDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01OGE4YzY3ZmM2ZmIwNTVmNGIyZDIxNGE1NzMwMjY0YWIwMTJmZWMyNGMxNmE3NzU4N2FkNGRiMjMwZjJmOWViJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.bUDh7mUauEQnGbGtvGVsTNpifNZ1LmE1UpLYlLlTI0k',

@@ -18,12 +18,12 @@ export default function Nav() {
   return (
     <header
       className={`${
-        theme === 'light' ? 'bg-neutral-50 text-black' : 'bg-black'
+        theme === 'light' ? 'bg-neutral-50 text-black' : 'bg-black text-white'
       } w-full fixed top-0 left-0 flex justify-center z-10 opacity-90`}
     >
       <nav className='w-full h-16 mx-60 gap-8 flex flex-row justify-between items-center text-center text-lg'>
         <a
-          href='#home'
+          href='/'
           className='text-2xl font-shadowintolight font-bold h-full flex items-center group'
         >
           <span

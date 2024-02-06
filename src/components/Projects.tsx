@@ -38,6 +38,7 @@ export default function Projects() {
             key={projectData.id}
             id={projectData.id}
             img={projectData.img}
+            route={projectData.route}
           />
         ))}
       </div>

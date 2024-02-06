@@ -7,14 +7,14 @@ export default function ProjectDetail({
   repo,
   demo,
 }: {
-  skills: [];
+  skills: string[];
   id: string;
   deploy: string;
   repo: string;
   demo: string;
 }) {
   return (
-    <section>
+    <section className='w-screen h-screen bg-white text-black flex flex-col items-center justify-center'>
       <h1>{id}</h1>
 
       <div id='skills'>
