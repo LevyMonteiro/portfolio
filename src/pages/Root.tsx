@@ -1,6 +1,6 @@
-import About from '../components/About';
-import Home from '../components/Home';
-import Projects from '../components/Projects';
+import About from '../components/sections/About';
+import Home from '../components/sections/Home';
+import Projects from '../components/sections/Projects';
 
 export default function Root() {
   return (

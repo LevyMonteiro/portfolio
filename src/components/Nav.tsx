@@ -57,13 +57,13 @@ export default function Nav() {
 
         <ul className='flex h-full gap-8 font-medium'>
           <li className='flex justify-center items-center'>
-            <a href='#about' className=' hover:text-violet-600 justify-center'>
+            <a href='/#about' className=' hover:text-violet-600 justify-center'>
               About
             </a>
           </li>
           <li className='flex justify-center items-center'>
             <a
-              href='#projects'
+              href='/#projects'
               className=' hover:text-violet-600 justify-center'
             >
               Projects
@@ -71,7 +71,7 @@ export default function Nav() {
           </li>
           <li className='flex justify-center items-center'>
             <a
-              href='#contact'
+              href='/#contact'
               className=' hover:text-violet-600 justify-center'
             >
               Contact

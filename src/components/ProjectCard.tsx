@@ -21,7 +21,7 @@ export default function ProjectCard({
             theme === 'light'
               ? 'bg-violet-600 group-hover:bg-opacity-90'
               : 'bg-neutral-600 group-hover:brightness-110'
-          } p-5 flex flex-col items-center justify-center font-medium`}
+          } p-5 flex flex-col items-center justify-center font-medium text-white`}
         >
           {id}
         </div>

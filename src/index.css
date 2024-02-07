@@ -18,5 +18,6 @@
   @layer components {
     body {
       @apply w-screen flex justify-center items-center overflow-x-hidden scroll-smooth font-inter;
+      height: -webkit-fill-available;
     }
   }
