@@ -2,7 +2,7 @@
 
   @font-face {
     font-family: 'shadowsintolight';
-    src: url('assets/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf');
+    src: url('assets/fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf');
   }
 
   @tailwind base;

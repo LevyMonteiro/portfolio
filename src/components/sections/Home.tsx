@@ -87,7 +87,7 @@ export default function Home() {
               />
 
               <image
-                href='src/assets/blob-img.png'
+                href='src/assets/home/blob-img.png'
                 width={'100%'}
                 height={'106%'}
               />

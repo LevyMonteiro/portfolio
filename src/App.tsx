@@ -20,8 +20,8 @@ export default function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      Component: Root,
       errorElement: <ErrorPage />,
+      Component: Root,
     },
     {
       path: project0.route,
