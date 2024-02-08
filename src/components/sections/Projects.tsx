@@ -32,7 +32,7 @@ export default function Projects() {
 
       <div
         id='projects-container'
-        className='w-[1184px] grid grid-cols-3 gap-7'
+        className='w-[1184px] grid grid-cols-3 gap-7 text-white'
       >
         {projectsData.map((projectData: any) => (
           <ProjectCard
@@ -51,7 +51,7 @@ export default function Projects() {
           theme === 'light'
             ? 'bg-violet-600 hover:bg-neutral-50 border-violet-600'
             : 'bg-violet-700 hover:bg-neutral-950 border-violet-700'
-        } flex items-center gap-1 px-6 py-3 text-lg rounded-sm border-[2px] hover:text-violet-600 transition ease-linear duration-300`}
+        } flex items-center gap-1 px-6 py-3 text-lg rounded-sm border-[2px] text-white hover:text-violet-600 transition ease-linear duration-300`}
       >
         <GitFork />
         See All

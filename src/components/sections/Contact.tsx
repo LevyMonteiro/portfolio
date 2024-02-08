@@ -10,7 +10,7 @@ export default function Contact() {
       id='contact'
       className={`${
         theme === 'light' ? 'bg-violet-800' : 'bg-neutral-950'
-      } w-screen h-screen flex justify-center items-center pt-16 text-white`}
+      } w-screen min-h-screen flex justify-center items-center py-16 text-white`}
     >
       <div
         id='wrapper'
@@ -46,7 +46,7 @@ export default function Contact() {
           />
         </div>
 
-        <div id='form' className='flex flex-col gap-6'>
+        <div id='form' className='flex flex-col gap-6 h-full'>
           <h2 className='text-white text-4xl mb-2 font-poppins font-semibold'>
             Get in Touch
           </h2>
@@ -58,7 +58,9 @@ export default function Contact() {
               id='name'
               placeholder='Enter your full name'
               className={`${
-                theme === 'light' ? 'bg-violet-800' : 'bg-neutral-950'
+                theme === 'light'
+                  ? 'bg-violet-800 focus:border-orange-500'
+                  : 'bg-neutral-950 focus:border-violet-700'
               } border-[2px] border-neutral-300 rounded-sm px-4 py-3 focus:outline-none mb-2`}
             />
 
@@ -68,7 +70,9 @@ export default function Contact() {
               id='email'
               placeholder='Enter your best email'
               className={`${
-                theme === 'light' ? 'bg-violet-800' : 'bg-neutral-950'
+                theme === 'light'
+                  ? 'bg-violet-800 focus:border-orange-500'
+                  : 'bg-neutral-950 focus:border-violet-700'
               } border-[2px] border-neutral-300 rounded-sm px-4 py-3 focus:outline-none mb-2`}
             />
 
@@ -78,7 +82,9 @@ export default function Contact() {
               id='subject'
               placeholder='Enter a subject'
               className={`${
-                theme === 'light' ? 'bg-violet-800' : 'bg-neutral-950'
+                theme === 'light'
+                  ? 'bg-violet-800 focus:border-orange-500'
+                  : 'bg-neutral-950 focus:border-violet-700'
               } border-[2px] border-neutral-300 rounded-sm px-4 py-3 focus:outline-none mb-2`}
             />
 
@@ -90,8 +96,10 @@ export default function Contact() {
               rows='7'
               placeholder='Your message here...'
               className={`${
-                theme === 'light' ? 'bg-violet-800' : 'bg-neutral-950'
-              } border-[2px] border-neutral-300 rounded-sm px-4 py-3 focus:outline-none mb-2`}
+                theme === 'light'
+                  ? 'bg-violet-800 focus:border-orange-500'
+                  : 'bg-neutral-950 focus:border-violet-700'
+              } border-[2px] border-neutral-300 rounded-sm px-4 py-3 focus:outline-none mb-2 max-h-[380px]`}
             ></textarea>
 
             <button

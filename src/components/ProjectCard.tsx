@@ -19,7 +19,7 @@ export default function ProjectCard({
         <div
           className={`${
             theme === 'light' ? 'bg-violet-600' : 'bg-violet-700'
-          } text-center fontme h-min p-4 text-lg rounded-sm transition ease-linear duration-300`}
+          } text-center h-min p-4 text-lg rounded-sm transition ease-linear duration-300`}
         >
           {id}
         </div>
