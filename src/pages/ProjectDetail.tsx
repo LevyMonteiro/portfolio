@@ -73,7 +73,7 @@ export default function ProjectDetail({
                 <li id='deploy'>
                   <a
                     href={deploy}
-                    className='flex gap-3 items-center hover:text-violet-700'
+                    className='flex gap-3 items-center hover:text-violet-700 transition duration-300 ease-linear'
                     target='_blank'
                   >
                     <Globe />
@@ -84,7 +84,7 @@ export default function ProjectDetail({
                 <li id='repo'>
                   <a
                     href={repo}
-                    className='flex gap-3 items-center hover:text-violet-700'
+                    className='flex gap-3 items-center hover:text-violet-700 transition duration-300 ease-linear'
                     target='_blank'
                   >
                     <Github />
