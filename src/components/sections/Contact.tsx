@@ -10,7 +10,7 @@ export default function Contact() {
       id='contact'
       className={`${
         theme === 'light' ? 'bg-violet-800' : 'bg-neutral-950'
-      } w-screen h-screen flex justify-center items-center pt-16`}
+      } w-screen h-screen flex justify-center items-center pt-16 text-white`}
     >
       <div
         id='wrapper'
@@ -98,8 +98,8 @@ export default function Contact() {
               className={`${
                 theme === 'light'
                   ? 'hover:bg-orange-500'
-                  : 'border-violet-800 bg-violet-800 hover:bg-neutral-950 text-neutral-200 hover:text-violet-600'
-              } w-min px-6 py-3 rounded-sm border-[2px] transition ease-linear duration-300`}
+                  : 'border-violet-800 bg-violet-800 hover:bg-neutral-950 text-neutral-200 hover:text-violet-600 duration-300'
+              } w-min px-6 py-3 rounded-sm border-[2px] transition ease-linear `}
             >
               <div className='flex gap-2 text-lg items-center'>
                 <Send />
