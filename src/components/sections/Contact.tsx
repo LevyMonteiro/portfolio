@@ -99,9 +99,9 @@ export default function Contact() {
                 theme === 'light'
                   ? 'hover:bg-orange-500'
                   : 'border-violet-800 bg-violet-800 hover:bg-neutral-950 text-neutral-200 hover:text-violet-600 duration-300'
-              } w-min px-6 py-3 rounded-sm border-[2px] transition ease-linear `}
+              } w-min px-6 py-3 rounded-sm border-[2px] transition ease-linear`}
             >
-              <div className='flex gap-2 text-lg items-center'>
+              <div className='flex gap-1 text-lg items-center'>
                 <Send />
                 <p>Submit</p>
               </div>

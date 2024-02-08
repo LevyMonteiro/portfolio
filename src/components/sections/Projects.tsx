@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import { ProjectsContext } from '../../context/ProjectsContext';
 import ProjectCard from '../ProjectCard';
+import { GitFork } from 'lucide-react';
 
 export default function Projects() {
   const { projectsData } = useContext(ProjectsContext);
@@ -48,10 +49,11 @@ export default function Projects() {
         target='_blank'
         className={`${
           theme === 'light'
-            ? 'bg-violet-600 hover:bg-opacity-90'
-            : 'bg-neutral-600 hover:brightness-110'
-        } px-8 py-2 rounded-[3px] text-lg text-white`}
+            ? 'bg-violet-600 hover:bg-neutral-50 border-violet-600'
+            : 'bg-violet-700 hover:bg-neutral-950 border-violet-700'
+        } flex items-center gap-1 px-6 py-3 text-lg rounded-sm border-[2px] hover:text-violet-600 transition ease-linear duration-300`}
       >
+        <GitFork />
         See All
       </a>
     </section>

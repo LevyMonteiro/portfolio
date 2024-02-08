@@ -13,15 +13,13 @@ export default function ProjectCard({
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className='flex flex-col group'>
-      <a href={route} className='w-full h-64'>
+    <div className='flex flex-col group h-[248px]'>
+      <a href={route} className='w-full h-full'>
         <img src={img} alt={`${id} app demo`} />
         <div
           className={`${
-            theme === 'light'
-              ? 'bg-violet-600 group-hover:bg-opacity-90'
-              : 'bg-neutral-600 group-hover:brightness-110'
-          } p-5 flex flex-col items-center justify-center font-medium text-white`}
+            theme === 'light' ? 'bg-violet-600' : 'bg-violet-700'
+          } text-center fontme h-min p-4 text-lg rounded-sm transition ease-linear duration-300`}
         >
           {id}
         </div>
