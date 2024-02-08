@@ -45,20 +45,20 @@ export default function About() {
             Nice to meet you!
           </h2>
 
-          <p className='text-left  text-neutral-300 leading-7'>
+          <p className='text-lg opacity-85 text-left  text-white leading-7'>
             I'm a Front-end web developer, I dedicate myself full time to
             programming work and studies. I consider myself passionate about
             everything that encompasses the technology area since always.
           </p>
 
-          <p className='text-left text-neutral-300 leading-7'>
+          <p className='text-lg opacity-85 text-left text-white leading-7'>
             Before dedicating myself to the area I was a volunteer in the
             technology area of my church for a few years and I also did
             freelance work in photo shoots, filming weddings, and parties in
             general.
           </p>
 
-          <p className='text-left text-neutral-300 leading-7'>
+          <p className='text-lg opacity-85 text-left text-white leading-7'>
             Always excited to learn and progress. I love collaborating, feel
             free to contact me.
           </p>
@@ -76,7 +76,7 @@ export default function About() {
             My Skills
           </h2>
 
-          <p className='text-center text-neutral-300 mb-2'>
+          <p className='text-lg opacity-85 text-center text-white mb-2'>
             Some skills and technologies I’ve been working with recently:
           </p>
 

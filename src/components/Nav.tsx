@@ -24,14 +24,14 @@ export default function Nav() {
       <nav className='w-full h-16 mx-60 gap-8 flex flex-row justify-between items-center text-center text-lg'>
         <a
           href='/'
-          className='text-2xl font-shadowintolight font-bold h-full flex items-center group'
+          className='text-2xl font-shadowintolight font-bold h-full flex items-center group '
         >
           <span
             className={`${
               theme === 'light'
                 ? 'group-hover:text-black'
                 : 'group-hover:text-white'
-            } text-violet-700`}
+            } text-violet-700 transition ease-in-out duration-500`}
           >
             &lt;
           </span>
@@ -39,7 +39,7 @@ export default function Nav() {
           <span
             className={`${
               theme === 'light' ? 'text-black ' : 'text-white'
-            } mx-[2px] group-hover:text-violet-700`}
+            } mx-[2px] group-hover:text-violet-700 transition ease-in-out duration-500`}
           >
             Levy
           </span>
@@ -49,7 +49,7 @@ export default function Nav() {
               theme === 'light'
                 ? 'group-hover:text-black'
                 : 'group-hover:text-white'
-            } text-violet-700`}
+            } text-violet-700 transition ease-in-out duration-500`}
           >
             /&gt;
           </span>
@@ -57,14 +57,17 @@ export default function Nav() {
 
         <ul className='flex h-full gap-8 font-medium'>
           <li className='flex justify-center items-center'>
-            <a href='/#about' className=' hover:text-violet-600 justify-center'>
+            <a
+              href='/#about'
+              className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
+            >
               About
             </a>
           </li>
           <li className='flex justify-center items-center'>
             <a
               href='/#projects'
-              className=' hover:text-violet-600 justify-center'
+              className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
             >
               Projects
             </a>
@@ -72,13 +75,13 @@ export default function Nav() {
           <li className='flex justify-center items-center'>
             <a
               href='/#contact'
-              className=' hover:text-violet-600 justify-center'
+              className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
             >
               Contact
             </a>
           </li>
 
-          <li className='flex justify-center items-center hover:text-violet-600'>
+          <li className='flex justify-center items-center hover:text-violet-600 transition ease-in-out duration-300'>
             <button onClick={toggleTheme}>
               {theme === 'dark' ? <Sun /> : <Moon />}
             </button>
