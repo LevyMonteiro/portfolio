@@ -18,7 +18,7 @@ export default function ProjectCard({
         <img src={img} alt={`${id} app demo`} />
         <div
           className={`${
-            theme === 'light' ? 'bg-violet-600' : 'bg-violet-700'
+            theme === 'light' ? 'bg-violet-600' : 'bg-violet-800'
           } text-center h-min p-4 text-lg rounded-sm transition ease-linear duration-300`}
         >
           {id}

@@ -50,7 +50,7 @@ export default function Projects() {
         className={`${
           theme === 'light'
             ? 'bg-violet-600 hover:bg-neutral-50 border-violet-600'
-            : 'bg-violet-700 hover:bg-neutral-950 border-violet-700'
+            : 'bg-violet-800 hover:bg-neutral-950 border-violet-800'
         } flex items-center gap-1 px-6 py-3 text-lg rounded-sm border-[2px] text-white hover:text-violet-600 transition ease-linear duration-300`}
       >
         <GitFork />

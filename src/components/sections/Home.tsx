@@ -47,7 +47,7 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className='font-poppins text-8xl text-violet-600 relative -left-[6px]'>
+          <p className='font-poppins text-8xl text-violet-800 relative -left-[6px]'>
             Front-end Developer
           </p>
 
