@@ -1,9 +1,49 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { ThemeContext } from '../../context/ThemeContext';
 import { Send } from 'lucide-react';
 
 export default function Contact() {
   const { theme } = useContext(ThemeContext);
+
+  const defaultData = {
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  };
+
+  const [formData, setFormData] = useState(defaultData);
+
+  const { name, email, subject, message } = formData;
+
+  const form = useRef();
+
+  const onChange = (e: { target: { id: any; value: any } }) =>
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value,
+    }));
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_bo5v7yw', 'template_gq6ml2j', form.current, {
+        publicKey: 'WOxR54mY0YCdsNKIH',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
+
+    alert('Email sent');
+  };
 
   return (
     <section
@@ -51,12 +91,20 @@ export default function Contact() {
             Get in Touch
           </h2>
 
-          <form action='' className='flex flex-col gap-[6px] text-lg'>
+          <form
+            className='flex flex-col gap-[6px] text-lg'
+            onSubmit={onSubmit}
+            ref={form}
+          >
             <label htmlFor='name'>Name</label>
             <input
+              required
               type='text'
               id='name'
+              name='name'
               placeholder='Enter your full name'
+              value={name}
+              onChange={onChange}
               className={`${
                 theme === 'light'
                   ? 'bg-violet-800 focus:border-orange-500'
@@ -66,9 +114,13 @@ export default function Contact() {
 
             <label htmlFor='email'>Email</label>
             <input
+              required
               type='text'
               id='email'
+              name='email'
               placeholder='Enter your best email'
+              value={email}
+              onChange={onChange}
               className={`${
                 theme === 'light'
                   ? 'bg-violet-800 focus:border-orange-500'
@@ -78,9 +130,13 @@ export default function Contact() {
 
             <label htmlFor='subject'>Subject</label>
             <input
+              required
               type='text'
               id='subject'
+              name='subject'
               placeholder='Enter a subject'
+              value={subject}
+              onChange={onChange}
               className={`${
                 theme === 'light'
                   ? 'bg-violet-800 focus:border-orange-500'
@@ -90,11 +146,14 @@ export default function Contact() {
 
             <label htmlFor='message'>Message</label>
             <textarea
-              name=''
+              required
               id='message'
-              cols='30'
-              rows='7'
+              name='message'
+              cols={30}
+              rows={7}
               placeholder='Your message here...'
+              value={message}
+              onChange={onChange}
               className={`${
                 theme === 'light'
                   ? 'bg-violet-800 focus:border-orange-500'
@@ -103,16 +162,15 @@ export default function Contact() {
             ></textarea>
 
             <button
+              type='submit'
               className={`${
                 theme === 'light'
                   ? 'hover:bg-orange-500'
                   : 'border-violet-800 bg-violet-800 hover:bg-neutral-950 text-neutral-200 hover:text-violet-600 duration-300'
-              } w-min px-6 py-3 rounded-sm border-[2px] transition ease-linear`}
+              } w-min px-6 py-3 rounded-sm border-[2px] flex gap-1 text-lg items-center transition ease-linear`}
             >
-              <div className='flex gap-1 text-lg items-center'>
-                <Send />
-                <p>Submit</p>
-              </div>
+              <Send />
+              Submit
             </button>
           </form>
         </div>
