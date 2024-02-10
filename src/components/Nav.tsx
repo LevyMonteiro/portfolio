@@ -1,8 +1,8 @@
-import { Moon, Sun } from 'lucide-react';
+import { ArrowBigLeftDash, Moon, Sun } from 'lucide-react';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
-export default function Nav() {
+export default function Nav({ currentPage }: any) {
   const { theme, setTheme } = useContext(ThemeContext);
 
   function toggleTheme() {
@@ -24,7 +24,7 @@ export default function Nav() {
       <nav className='w-[1184px] h-16 gap-8 flex flex-wrap justify-between items-center text-center text-lg'>
         <a
           href='/'
-          className='text-2xl font-shadowintolight font-bold h-full flex items-center group '
+          className='text-2xl font-shadowintolight font-bold h-full flex items-center group'
         >
           <span
             className={`${
@@ -56,30 +56,48 @@ export default function Nav() {
         </a>
 
         <ul className='flex h-full gap-8 font-medium'>
-          <li className='flex justify-center items-center'>
-            <a
-              href='/#about'
-              className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
-            >
-              About
-            </a>
-          </li>
-          <li className='flex justify-center items-center'>
-            <a
-              href='/#projects'
-              className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
-            >
-              Projects
-            </a>
-          </li>
-          <li className='flex justify-center items-center'>
-            <a
-              href='/#contact'
-              className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
-            >
-              Contact
-            </a>
-          </li>
+          {currentPage === 'root' && (
+            <>
+              <li className='flex justify-center items-center'>
+                <a
+                  href='/#about'
+                  className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
+                >
+                  About
+                </a>
+              </li>
+              <li className='flex justify-center items-center'>
+                <a
+                  href='/#projects'
+                  className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
+                >
+                  Projects
+                </a>
+              </li>
+              <li className='flex justify-center items-center'>
+                <a
+                  href='/#contact'
+                  className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
+                >
+                  Contact
+                </a>
+              </li>
+            </>
+          )}
+
+          {currentPage === 'projectDetail' && (
+            <>
+              <li className='flex justify-center items-center hover:text-violet-600 transition ease-in-out duration-300`'>
+                <a
+                  href='/'
+                  className='hover:text-violet-600 transition ease-in-out duration-300 justify-center flex items-center gap-1'
+                >
+                  <ArrowBigLeftDash />
+                  Back Home
+                </a>
+              </li>
+            </>
+          )}
 
           <li className='flex justify-center items-center hover:text-violet-600 transition ease-in-out duration-300'>
             <button onClick={toggleTheme}>

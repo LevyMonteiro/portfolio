@@ -1,7 +1,6 @@
 import { ProjectsContext } from './context/ProjectsContext';
 import { useContext } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Nav from './components/Nav';
 import Root from './pages/Root';
 import ErrorPage from './pages/ErrorPage';
 import ProjectDetail from './pages/ProjectDetail';
@@ -14,8 +13,6 @@ export default function App() {
   const project3 = projectsData[3];
   const project4 = projectsData[4];
   const project5 = projectsData[5];
-
-  // console.log(project0, project1, project2, project3, project4, project5);
 
   const router = createBrowserRouter([
     {
@@ -110,7 +107,6 @@ export default function App() {
   ]);
   return (
     <>
-      <Nav />
       <RouterProvider router={router} />
     </>
   );
