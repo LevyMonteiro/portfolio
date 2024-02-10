@@ -1,4 +1,4 @@
-import { ArrowBigLeftDash, Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
@@ -85,15 +85,14 @@ export default function Nav({ currentPage }: any) {
             </>
           )}
 
-          {currentPage === 'projectDetail' && (
+          {currentPage === 'projectPage' && (
             <>
               <li className='flex justify-center items-center hover:text-violet-600 transition ease-in-out duration-300`'>
                 <a
                   href='/'
                   className='hover:text-violet-600 transition ease-in-out duration-300 justify-center flex items-center gap-1'
                 >
-                  <ArrowBigLeftDash />
-                  Back Home
+                  Home
                 </a>
               </li>
             </>
