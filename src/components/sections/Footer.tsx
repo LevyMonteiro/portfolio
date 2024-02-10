@@ -21,7 +21,7 @@ export default function Footer({ currentPage }: any) {
       } w-screen flex justify-center items-center py-6`}
     >
       <div className='w-[1184px] flex flex-col'>
-        <div className='flex justify-between opacity-70 font-medium'>
+        <div className='flex justify-between opacity-70 font-medium text-lg'>
           <a
             href='/'
             className='hover:text-violet-600 transition ease-in-out duration-300 justify-center flex items-center gap-1'
