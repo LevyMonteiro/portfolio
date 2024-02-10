@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './pages/Root';
 import ErrorPage from './pages/ErrorPage';
-import ProjectDetail from './pages/ProjectDetail';
+import ProjectPage from './pages/ProjectPage';
 
 export default function App() {
   const { projectsData } = useContext(ProjectsContext);
@@ -23,7 +23,7 @@ export default function App() {
     {
       path: project0.route,
       element: (
-        <ProjectDetail
+        <ProjectPage
           key={project0.route}
           skills={project0.skills}
           about={project0.about}
@@ -37,7 +37,7 @@ export default function App() {
     {
       path: project1.route,
       element: (
-        <ProjectDetail
+        <ProjectPage
           key={project1.route}
           skills={project1.skills}
           about={project1.about}
@@ -51,7 +51,7 @@ export default function App() {
     {
       path: project2.route,
       element: (
-        <ProjectDetail
+        <ProjectPage
           key={project2.route}
           skills={project2.skills}
           about={project2.about}
@@ -65,7 +65,7 @@ export default function App() {
     {
       path: project3.route,
       element: (
-        <ProjectDetail
+        <ProjectPage
           key={project3.route}
           skills={project3.skills}
           about={project3.about}
@@ -79,7 +79,7 @@ export default function App() {
     {
       path: project4.route,
       element: (
-        <ProjectDetail
+        <ProjectPage
           key={project4.route}
           skills={project4.skills}
           about={project4.about}
@@ -93,7 +93,7 @@ export default function App() {
     {
       path: project5.route,
       element: (
-        <ProjectDetail
+        <ProjectPage
           key={project5.route}
           skills={project5.skills}
           about={project5.about}

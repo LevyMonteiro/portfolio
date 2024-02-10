@@ -7,8 +7,8 @@ import Nav from '../components/Nav';
 export default function Root() {
   return (
     <>
+      <Nav currentPage='root' />
       <main>
-        <Nav currentPage='root' />
         <Home />
         <About />
         <Projects />
