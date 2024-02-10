@@ -3,6 +3,7 @@ import About from '../components/sections/About';
 import Projects from '../components/sections/Projects';
 import Contact from '../components/sections/Contact';
 import Nav from '../components/Nav';
+import Footer from '../components/sections/Footer';
 
 export default function Root() {
   return (
@@ -14,6 +15,7 @@ export default function Root() {
         <Projects />
         <Contact />
       </main>
+      <Footer currentPage='root' />
     </>
   );
 }

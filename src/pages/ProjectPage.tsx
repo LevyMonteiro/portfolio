@@ -1,4 +1,5 @@
 import Nav from '../components/Nav';
+import Footer from '../components/sections/Footer';
 import ProjectDetail from '../components/sections/ProjectDetail';
 
 export default function ProjectPage({
@@ -18,7 +19,7 @@ export default function ProjectPage({
 }) {
   return (
     <>
-      <Nav currentPage='projectDetail' />
+      <Nav currentPage='projectPage' />
       <main>
         <ProjectDetail
           key={id}
@@ -30,6 +31,7 @@ export default function ProjectPage({
           demo={demo}
         />
       </main>
+      <Footer currentPage='projectPage' />
     </>
   );
 }
