@@ -50,7 +50,7 @@ export default function Contact() {
       id='contact'
       className={`${
         theme === 'light' ? 'bg-violet-800' : 'bg-neutral-950'
-      } w-screen min-h-screen flex justify-center items-center py-16 text-white`}
+      } w-screen min-h-screen flex justify-center items-center py-24 text-white`}
     >
       <div
         id='wrapper'
