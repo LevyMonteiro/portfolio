@@ -36,13 +36,13 @@ export default function Contact() {
       .then(
         () => {
           console.log('SUCCESS!');
+          alert('Email sent');
         },
         (error) => {
           console.log('FAILED...', error.text);
+          alert('Failed to sent message');
         }
       );
-
-    alert('Email sent');
   };
 
   return (
