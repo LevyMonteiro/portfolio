@@ -1,5 +1,5 @@
 import Nav from '../components/Nav';
-import Footer from '../components/sections/Footer';
+import Footer from '../components/Footer';
 import ProjectDetail from '../components/sections/ProjectDetail';
 
 export default function ProjectPage({

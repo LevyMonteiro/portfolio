@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ThemeContext } from '../../context/ThemeContext';
+import { ThemeContext } from '../context/ThemeContext';
 import {
   ArrowBigLeftDash,
   ArrowBigUpDash,
@@ -23,7 +23,7 @@ export default function Footer({ currentPage }: any) {
       <div className='w-[1184px] flex flex-col'>
         <div className='flex justify-between opacity-70 font-medium text-lg'>
           <a
-            href='/'
+            href='/#home'
             className='hover:text-violet-600 transition ease-in-out duration-300 justify-center flex items-center gap-1'
           >
             {currentPage === 'root' && (
