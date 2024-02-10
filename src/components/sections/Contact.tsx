@@ -169,7 +169,7 @@ export default function Contact() {
                   : 'border-violet-800 bg-violet-800 hover:bg-neutral-950 text-neutral-200 hover:text-violet-600 duration-300'
               } w-min px-6 py-3 rounded-sm border-[2px] flex gap-1 text-lg items-center transition ease-linear`}
             >
-              <Send />
+              <Send className='size-[22px]' />
               Submit
             </button>
           </form>
