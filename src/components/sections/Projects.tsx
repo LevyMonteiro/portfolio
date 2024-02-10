@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <section
       id='projects'
-      className='min-h-screen w-screen flex flex-col justify-center items-center m-auto gap-16'
+      className='min-h-screen w-screen flex flex-col justify-center items-center m-auto gap-16 py-24'
     >
       <h2
         className={`${
