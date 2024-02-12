@@ -17,7 +17,7 @@ export default function Home() {
       id='home'
       className={`${
         theme === 'light' ? 'bg-neutral-50' : 'bg-black'
-      } w-full min-h-screen flex justify-center px8`}
+      } w-screen min-h-screen flex justify-center px8 py-24`}
     >
       <div
         id='home__container'

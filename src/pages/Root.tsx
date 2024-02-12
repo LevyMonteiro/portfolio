@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function Root() {
   return (
-    <>
+    <div>
       <Nav currentPage='root' />
       <main>
         <Home />
@@ -16,6 +16,6 @@ export default function Root() {
         <Contact />
       </main>
       <Footer currentPage='root' />
-    </>
+    </div>
   );
 }

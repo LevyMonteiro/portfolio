@@ -27,7 +27,7 @@ export default function About() {
       id='about'
       className={`${
         theme === 'light' ? 'bg-violet-800' : 'bg-neutral-950'
-      } w-screen flex justify-center py-32 px-60`}
+      } w-screen flex justify-center py-32`}
     >
       <div
         id='about-container'

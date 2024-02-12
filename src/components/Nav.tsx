@@ -19,7 +19,7 @@ export default function Nav({ currentPage }: any) {
     <header
       className={`${
         theme === 'light' ? 'bg-neutral-50 text-black' : 'bg-black text-white'
-      } w-full fixed top-0 left-0 flex justify-center z-10 opacity-90`}
+      } w-screen fixed top-0 left-0 flex justify-center z-10 opacity-90`}
     >
       <nav className='w-[1184px] h-16 gap-8 flex flex-wrap justify-between items-center text-center text-lg'>
         <a
