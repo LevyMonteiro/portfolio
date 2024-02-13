@@ -3,6 +3,14 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      screens: {
+        sm: '425px',
+        md: '640px',
+        lg: '768px',
+        xl: '1024px',
+        '2xl': '1280px',
+      },
+
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
