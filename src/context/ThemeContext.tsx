@@ -6,15 +6,13 @@ type ThemeContextProviderProps = {
 
 export const ThemeContext = createContext({
   theme: 'theme',
-  setTheme: (theme: string) => {},
+  setTheme: (_theme: string) => {},
 });
 
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState(
-    localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark'
-  );
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
   return (
     <ThemeContext.Provider
