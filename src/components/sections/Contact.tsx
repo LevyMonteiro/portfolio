@@ -18,7 +18,7 @@ export default function Contact() {
 
   const { name, email, subject, message } = formData;
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
   const onChange = (e: { target: { id: any; value: any } }) =>
     setFormData((prevState) => ({
@@ -28,6 +28,10 @@ export default function Contact() {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!form.current) {
+      return;
+    }
 
     emailjs
       .sendForm('service_bo5v7yw', 'template_gq6ml2j', form.current, {
