@@ -1,8 +1,8 @@
 import { createContext } from 'react';
 
 type ProjectContextProps = {
-  find(arg0: (p: any) => boolean): unknown;
-  map: any;
+  find?(arg0: (p: any) => boolean): unknown;
+  map?: any;
   id: string;
   img: string;
   route: string;
@@ -13,7 +13,7 @@ type ProjectContextProps = {
   demo: string;
 };
 
-const projectsData: ProjectContextProps = [
+const projectsData: ProjectContextProps[] = [
   {
     id: 'Random Quote Machine',
     img: 'src/assets/img/random-quote-machine.png',
@@ -103,11 +103,15 @@ const projectsData: ProjectContextProps = [
   },
 ];
 
-export const ProjectsContext = createContext({ projectsData });
+export const ProjectsContext = createContext<{
+  projectsData: ProjectContextProps[];
+}>({
+  projectsData,
+});
 
 export default function ProjectContextProvider({ children }: any) {
   return (
-    <ProjectsContext.Provider value={projectsData}>
+    <ProjectsContext.Provider value={{ projectsData }}>
       {children}
     </ProjectsContext.Provider>
   );
