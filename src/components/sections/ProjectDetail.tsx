@@ -104,7 +104,11 @@ export default function ProjectDetail({
             </h2>
 
             {about.map((d) => {
-              return <p className='opacity-85 text-lg w-full text-left'>{d}</p>;
+              return (
+                <p className='opacity-85 text-lg w-full text-left' key={d}>
+                  {d}
+                </p>
+              );
             })}
 
             <h2 className='text-3xl font-semibold font-poppins text-left w-full'>
