@@ -17,17 +17,17 @@ export default function Home() {
       id='home'
       className={`${
         theme === 'light' ? 'bg-neutral-50' : 'bg-black'
-      } w-screen min-h-screen flex justify-center px8 py-24`}
+      } w-screen min-h-screen flex justify-center px8 py-6 md:py-24`}
     >
       <div
         id='home__container'
-        className='flex justify-center items-center gap-16 w-[1184px]'
+        className='flex flex-col xl:flex-row justify-center items-center gap-8 xl:gap-16 xl:w-[80%] 2xl:w-[1184px]'
       >
         <div
           id='home__description'
-          className='flex flex-col justify-center gap-5 w-[600px] h-full'
+          className='flex flex-col justify-center text-center xl:text-start gap-3 sm:gap-5 w-[80%] lg:w-[480px] 2xl:w-[600px] h-max'
         >
-          <h1 className='text-3xl'>
+          <h1 className='text-lg lg:text-2xl 2xl:text-3xl'>
             <span
               className={`${
                 theme === 'light'
@@ -47,14 +47,14 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className='font-poppins text-8xl text-violet-800 relative -left-[6px]'>
+          <p className='font-poppins text-5xl sm:text-6xl lg:text-7xl 2xl:text-8xl text-violet-800 relative -left-[6px]'>
             Front-end Developer
           </p>
 
           <p
             className={`${
               theme === 'light' ? 'text-neutral-800' : ''
-            } text-3xl text-neutral-200 text-balance`}
+            } text-lg lg:text-2xl 2xl:text-3xl text-neutral-200 sm:text-balance`}
           >
             Passionate about tech and learning new things, specialised in web
             design.
@@ -63,7 +63,7 @@ export default function Home() {
 
         <div
           id='home__photo'
-          className='h-full flex flex-col justify-center items-center w-[520px]'
+          className='h-min flex justify-center items-center w-[70%] sm:w-[75%] md:w-[420px] 2xl:w-[520px]'
         >
           <svg
             viewBox='0 0 200 187'
