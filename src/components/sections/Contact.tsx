@@ -85,7 +85,7 @@ export default function Contact() {
           </div>
 
           <img
-            src='src/assets/contact-us-4550329-3779137.webp'
+            src='assets/contact-us-4550329-3779137.webp'
             alt='contact-me ilustration'
           />
         </div>
