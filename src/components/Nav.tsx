@@ -41,7 +41,7 @@ export default function Nav({ currentPage }: any) {
 
           <a
             href='/'
-            className='text-2xl font-shadowintolight font-bold h-full flex items-center group'
+            className='text-2xl font-shadowsintolight font-bold h-full flex items-center group'
           >
             <span
               className={`${

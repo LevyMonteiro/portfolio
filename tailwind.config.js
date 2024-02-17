@@ -14,7 +14,7 @@ export default {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
-        shadowintolight: ['shadowsintolight', 'sans-serif'],
+        shadowsintolight: ['Shadows Into Light', 'sans-serif'],
       },
       keyframes: {
         blinking: {
