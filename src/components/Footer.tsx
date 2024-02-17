@@ -18,10 +18,10 @@ export default function Footer({ currentPage }: any) {
     <footer
       className={`${
         theme === 'light' ? 'bg-neutral-50 text-black' : 'bg-black text-white'
-      } w-screen flex justify-center items-center py-6`}
+      } w-screen flex justify-center items-center py-6 px-10 2xl:px-0`}
     >
       <div className='w-[1184px] flex flex-col'>
-        <div className='flex justify-between opacity-70 font-medium text-lg'>
+        <div className='flex justify-between opacity-90 font-medium text-base sm:text-lg'>
           <a
             href='/#home'
             className='hover:text-violet-600 transition ease-in-out duration-300 justify-center flex items-center gap-1'
@@ -80,7 +80,7 @@ export default function Footer({ currentPage }: any) {
           } my-3`}
         />
 
-        <div className='text-center opacity-60 text-sm'>
+        <div className='text-center opacity-60 text-xs sm:text-sm'>
           © {currentYear} | Portfolio website coded by Levy Monteiro
         </div>
       </div>
