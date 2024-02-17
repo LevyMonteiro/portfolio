@@ -13,8 +13,8 @@ export default function ProjectCard({
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className='flex flex-col group h-[248px]'>
-      <a href={route} className='w-full h-full'>
+    <div className='flex flex-col group h-min max-w-[376px] sm:w-[376px] sm:h-[248px] md:w-auto md:h-min'>
+      <a href={route} className='w-full h-min'>
         <img src={img} alt={`${id} app demo`} />
         <div
           className={`${

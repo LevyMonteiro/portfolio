@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <section
       id='projects'
-      className='min-h-screen w-screen flex flex-col justify-center items-center m-auto gap-16 py-24'
+      className='min-h-screen w-screen flex flex-col justify-center items-center m-auto gap-16 py-24 px-4 md:px-12'
     >
       <h2
         className={`${
@@ -32,7 +32,7 @@ export default function Projects() {
 
       <div
         id='projects-container'
-        className='w-[1184px] grid grid-cols-3 gap-7 text-white'
+        className='2xl:w-[1184px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 text-white'
       >
         {projectsData.map((projectData: any) => (
           <ProjectCard
