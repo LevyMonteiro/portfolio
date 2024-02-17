@@ -31,11 +31,11 @@ export default function About() {
     >
       <div
         id='about-container'
-        className='max-w-[1184px] grid grid-cols-2 gap-16'
+        className='max-w-[1184px] h-full flex flex-col px-10 md:px-16 2xl:px-0 2xl:flex-row gap-16'
       >
         <div
           id='description'
-          className='h-full font-poppins flex flex-col gap-7'
+          className='h-min 2xl:h-[396px] font-poppins flex flex-col 2xl:justify-between gap-7'
         >
           <h2
             className={`${
@@ -45,20 +45,20 @@ export default function About() {
             Nice to meet you!
           </h2>
 
-          <p className='text-lg opacity-85 text-left  text-white leading-7'>
+          <p className='text-lg opacity-85 text-center 2xl:text-left  text-white leading-7'>
             I'm a Front-end web developer, I dedicate myself full time to
             programming work and studies. I consider myself passionate about
             everything that encompasses the technology area since always.
           </p>
 
-          <p className='text-lg opacity-85 text-left text-white leading-7'>
+          <p className='text-lg opacity-85 text-center 2xl:text-left text-white leading-7'>
             Before dedicating myself to the area I was a volunteer in the
             technology area of my church for a few years and I also did
             freelance work in photo shoots, filming weddings, and parties in
             general.
           </p>
 
-          <p className='text-lg opacity-85 text-left text-white leading-7'>
+          <p className='text-lg opacity-85 text-center 2xl:text-left text-white leading-7'>
             Always excited to learn and progress. I love collaborating, feel
             free to contact me.
           </p>
@@ -66,7 +66,7 @@ export default function About() {
 
         <div
           id='skills'
-          className='h-full text-center font-poppins flex flex-col gap-8'
+          className='h-min 2xl:h-full text-center font-poppins flex flex-col gap-8'
         >
           <h2
             className={`${
@@ -82,7 +82,7 @@ export default function About() {
 
           <div
             id='cards'
-            className='flex flex-wrap justify-center items-center gap-3 w-[85%] mx-auto'
+            className='flex flex-wrap justify-center items-center gap-3 md:w-[85%] mx-auto'
           >
             {skills.map((skill: string) => (
               <Card skill={skill} key={skill} />
