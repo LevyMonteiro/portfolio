@@ -53,7 +53,7 @@ export default function Contact() {
     <section
       id='contact'
       className={`${
-        theme === 'light' ? 'bg-violet-800' : 'bg-neutral-950'
+        theme === 'light' ? 'bg-violet-800' : 'bg-neutral-900'
       } w-screen min-h-screen flex justify-center items-center py-24 xl:px-12 text-white`}
     >
       <div
@@ -112,7 +112,7 @@ export default function Contact() {
               className={`${
                 theme === 'light'
                   ? 'bg-violet-800 focus:border-orange-500'
-                  : 'bg-neutral-950 focus:border-violet-700'
+                  : 'bg-neutral-900 focus:border-violet-700'
               } border-[2px] border-neutral-300 rounded-sm px-4 py-3 focus:outline-none mb-2`}
             />
 
@@ -128,7 +128,7 @@ export default function Contact() {
               className={`${
                 theme === 'light'
                   ? 'bg-violet-800 focus:border-orange-500'
-                  : 'bg-neutral-950 focus:border-violet-700'
+                  : 'bg-neutral-900 focus:border-violet-700'
               } border-[2px] border-neutral-300 rounded-sm px-4 py-3 focus:outline-none mb-2`}
             />
 
@@ -144,7 +144,7 @@ export default function Contact() {
               className={`${
                 theme === 'light'
                   ? 'bg-violet-800 focus:border-orange-500'
-                  : 'bg-neutral-950 focus:border-violet-700'
+                  : 'bg-neutral-900 focus:border-violet-700'
               } border-[2px] border-neutral-300 rounded-sm px-4 py-3 focus:outline-none mb-2`}
             />
 
@@ -161,7 +161,7 @@ export default function Contact() {
               className={`${
                 theme === 'light'
                   ? 'bg-violet-800 focus:border-orange-500'
-                  : 'bg-neutral-950 focus:border-violet-700'
+                  : 'bg-neutral-900 focus:border-violet-700'
               } border-[2px] border-neutral-300 rounded-sm px-4 py-3 focus:outline-none mb-2 max-h-[380px]`}
             ></textarea>
 
@@ -170,7 +170,7 @@ export default function Contact() {
               className={`${
                 theme === 'light'
                   ? 'hover:bg-orange-500'
-                  : 'border-violet-800 bg-violet-800 hover:bg-neutral-950 text-neutral-200 hover:text-violet-600 duration-300'
+                  : 'border-violet-800 bg-violet-800 hover:bg-neutral-900 xl:bg-violet-800 text-neutral-200 hover:text-violet-600 duration-300'
               } w-full md:w-min px-6 py-3 rounded-sm border-[2px] flex gap-1 text-lg justify-center items-center transition ease-linear`}
             >
               <Send className='size-[22px]' />

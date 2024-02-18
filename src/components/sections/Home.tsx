@@ -47,7 +47,7 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className='font-poppins text-5xl sm:text-6xl lg:text-7xl 2xl:text-8xl text-violet-800 relative -left-[6px]'>
+          <p className='font-poppins text-5xl sm:text-6xl lg:text-7xl 2xl:text-8xl text-violet-700 relative -left-[6px]'>
             Front-end Developer
           </p>
 
@@ -69,7 +69,7 @@ export default function Home() {
             viewBox='0 0 200 187'
             xmlns='http://www.w3.org/2000/svg'
             xmlnsXlink='http://www.w3.org/1999/xlink'
-            className='fill-violet-800 hover:scale-110 transition duration-300 hover:brightness-90'
+            className='fill-violet-700 hover:scale-110 transition duration-300 hover:brightness-90'
           >
             <mask id='mask0' mask-type='alpha'>
               <path

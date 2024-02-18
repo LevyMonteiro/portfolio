@@ -26,7 +26,7 @@ export default function About() {
     <section
       id='about'
       className={`${
-        theme === 'light' ? 'bg-violet-800' : 'bg-neutral-950'
+        theme === 'light' ? 'bg-violet-800' : 'bg-neutral-900'
       } w-screen flex justify-center py-32`}
     >
       <div

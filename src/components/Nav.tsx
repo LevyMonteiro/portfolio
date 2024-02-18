@@ -173,7 +173,7 @@ export default function Nav({ currentPage }: any) {
         ref={mobNavRef}
         className={`${
           theme === 'light' ? 'bg-neutral-50 text-black' : 'bg-black text-white'
-        } h-80 text-lg font-medium absolute top-[62px] flex flex-col justify-center pt-16 -translate-y-full transition ease-in-out duration-700`}
+        }text-lg font-medium absolute top-[62px] flex flex-col justify-center pt-8 pb-16 -translate-y-full transition ease-in-out duration-700`}
       >
         <ul
           id='mobile-navegation'
