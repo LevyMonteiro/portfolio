@@ -1,10 +1,13 @@
 import { Moon, Sun, Menu, X } from 'lucide-react';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
 export default function Nav({ currentPage }: any) {
   const { theme, setTheme } = useContext(ThemeContext);
   const [navVisibility, setNavVisibility] = useState(false);
+  const mobNavRef = useRef<HTMLElement | null>(null);
+  const headerNavRef = useRef<HTMLElement | null>(null);
+  const toggleThemeBtnRef = useRef<HTMLButtonElement | null>(null);
 
   function toggleTheme() {
     if (theme === 'dark') {
@@ -15,19 +18,40 @@ export default function Nav({ currentPage }: any) {
       localStorage.setItem('theme', 'dark');
     }
   }
+  function hideMobNav() {
+    mobNavRef.current?.classList.add('-translate-y-full');
+    mobNavRef.current?.classList.remove('-translate-y-0');
+    setNavVisibility(false);
+  }
 
   function toggleNav() {
-    const mobNav = document.querySelector('#mobile-nav');
     if (navVisibility) {
-      mobNav?.classList.add('-translate-y-full');
-      mobNav?.classList.remove('-translate-y-0');
-      setNavVisibility(!navVisibility);
+      hideMobNav();
     } else {
-      mobNav?.classList.remove('-translate-y-full');
-      mobNav?.classList.add('-translate-y-0');
+      mobNavRef.current?.classList.remove('-translate-y-full');
+      mobNavRef.current?.classList.add('-translate-y-0');
       setNavVisibility(!navVisibility);
     }
   }
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        !mobNavRef.current?.contains(event.target as Node) &&
+        !headerNavRef.current?.contains(event.target as Node)
+      ) {
+        hideMobNav();
+      } else if (toggleThemeBtnRef.current?.contains(event.target as Node)) {
+        hideMobNav();
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <header
@@ -35,12 +59,15 @@ export default function Nav({ currentPage }: any) {
         theme === 'light' ? 'bg-neutral-50 text-black' : 'bg-black text-white'
       } w-screen min-h-16 fixed top-0 left-0 flex flex-col justify-start items-center z-10 opacity-90`}
     >
-      <nav className='w-full 2xl:w-[1184px] h-16 px-8 sm:px-12 2xl:px-0 gap-8 flex flex-wrap justify-between items-center text-center text-lg z-10'>
+      <nav
+        className='w-full 2xl:w-[1184px] h-16 px-8 sm:px-12 2xl:px-0 gap-8 flex flex-wrap justify-between items-center text-center text-lg z-10'
+        ref={headerNavRef}
+      >
         <div id='logo' className='h-full flex items-center group'>
           <span className='sr-only'>Home button navegation</span>
 
           <a
-            href='/'
+            href='/#'
             className='text-2xl font-shadowsintolight font-bold h-full flex items-center group'
           >
             <span
@@ -134,7 +161,7 @@ export default function Nav({ currentPage }: any) {
           </button>
 
           <li className='flex justify-center items-center hover:text-violet-600 transition ease-in-out duration-300'>
-            <button onClick={toggleTheme}>
+            <button onClick={toggleTheme} ref={toggleThemeBtnRef}>
               {theme === 'dark' ? <Sun /> : <Moon />}
             </button>
           </li>
@@ -143,9 +170,10 @@ export default function Nav({ currentPage }: any) {
 
       <nav
         id='mobile-nav'
+        ref={mobNavRef}
         className={`${
           theme === 'light' ? 'bg-neutral-50 text-black' : 'bg-black text-white'
-        } h-screen text-lg font-medium absolute top-[62px] flex flex-col justify-center pt-16 -translate-y-full transition ease-in-out duration-700`}
+        } h-80 text-lg font-medium absolute top-[62px] flex flex-col justify-center pt-16 -translate-y-full transition ease-in-out duration-700`}
       >
         <ul
           id='mobile-navegation'
@@ -156,7 +184,10 @@ export default function Nav({ currentPage }: any) {
               <li className='flex justify-center items-center'>
                 <a
                   href='/#about'
-                  className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
+                  className='hover:text-violet-600 transition ease-in-out duration-300 justify-center nav-links'
+                  onClick={() => {
+                    hideMobNav();
+                  }}
                 >
                   About
                 </a>
@@ -164,7 +195,10 @@ export default function Nav({ currentPage }: any) {
               <li className='flex justify-center items-center'>
                 <a
                   href='/#projects'
-                  className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
+                  className='hover:text-violet-600 transition ease-in-out duration-300 justify-center nav-links'
+                  onClick={() => {
+                    hideMobNav();
+                  }}
                 >
                   Projects
                 </a>
@@ -172,7 +206,10 @@ export default function Nav({ currentPage }: any) {
               <li className='flex justify-center items-center'>
                 <a
                   href='/#contact'
-                  className='hover:text-violet-600 transition ease-in-out duration-300 justify-center'
+                  className='hover:text-violet-600 transition ease-in-out duration-300 justify-center nav-links'
+                  onClick={() => {
+                    hideMobNav();
+                  }}
                 >
                   Contact
                 </a>
