@@ -13,11 +13,13 @@ export default function Footer({ currentPage }: any) {
   const currentYear = currentDate.getFullYear();
 
   const { theme } = useContext(ThemeContext);
-
+  console.log(currentPage);
   return (
     <footer
       className={`${
         theme === 'light' ? 'bg-neutral-50 text-black' : 'bg-black text-white'
+      } ${
+        currentPage === 'projectPage' ? 'sticky 2xl:absolute bottom-0' : ''
       } w-screen flex justify-center items-center py-6 px-10 2xl:px-0`}
     >
       <div className='w-[1184px] flex flex-col'>
