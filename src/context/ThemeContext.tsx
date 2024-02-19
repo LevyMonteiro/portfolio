@@ -22,7 +22,7 @@ export default function ThemeContextProvider({
       body?.classList.remove('bg-neutral-50', 'text-black');
       body?.classList.add('bg-black', 'text-white');
     }
-  }, [theme]);
+  }, [theme, setTheme]);
   return (
     <ThemeContext.Provider
       value={{
