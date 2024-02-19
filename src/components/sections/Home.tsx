@@ -9,15 +9,15 @@ export default function Home() {
       id='home'
       className={`${
         theme === 'light' ? 'bg-neutral-50' : 'bg-black'
-      } w-screen min-h-screen flex justify-center px8 py-6 md:py-24`}
+      } w-screen min-h-screen flex justify-center items-center px8 pt-14 pb-4 md:py-24`}
     >
       <div
         id='home__container'
-        className='flex flex-col xl:flex-row justify-center items-center gap-8 xl:gap-16 xl:w-[80%] 2xl:w-[1184px]'
+        className='flex flex-col xl:flex-row justify-center items-center gap-6 sm:gap-12 xl:gap-16 xl:w-[80%] 2xl:w-[1184px]'
       >
         <div
           id='home__description'
-          className='flex flex-col justify-center text-center xl:text-start gap-3 sm:gap-5 w-[80%] lg:w-[480px] 2xl:w-[600px] h-max'
+          className='flex flex-col justify-center text-center xl:text-start gap-3 sm:gap-5 w-[80%] lg:w-[480px] 2xl:w-[600px]'
         >
           <h1 className='text-lg lg:text-2xl 2xl:text-3xl'>
             <span
@@ -61,7 +61,7 @@ export default function Home() {
             viewBox='0 0 200 187'
             xmlns='http://www.w3.org/2000/svg'
             xmlnsXlink='http://www.w3.org/1999/xlink'
-            className='fill-violet-700 hover:scale-110 transition duration-300 hover:brightness-90'
+            className='fill-violet-700 hover:scale-110 transition duration-300 hover:brightness-90 w-full h-full'
           >
             <mask id='mask0' mask-type='alpha'>
               <path
