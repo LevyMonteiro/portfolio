@@ -1,6 +1,7 @@
-import { ProjectsContext } from './context/ProjectsContext';
-import { useContext } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { useContext } from 'react';
+import { ProjectsContext } from './context/ProjectsContext';
+import { ThemeContext } from './context/ThemeContext';
 import Root from './pages/Root';
 import ErrorPage from './pages/ErrorPage';
 import ProjectPage from './pages/ProjectPage';
@@ -12,6 +13,15 @@ interface RouteConfig {
 
 export default function App() {
   const { projectsData } = useContext(ProjectsContext);
+  const { theme } = useContext(ThemeContext);
+
+  const body = document.querySelector('body');
+  if (theme === 'light') {
+    body?.classList.add('bg-neutral-50', 'text-black');
+  } else {
+    body?.classList.remove('bg-neutral-50', 'text-black');
+    body?.classList.add('bg-black', 'text-white');
+  }
 
   const routes: RouteConfig[] = projectsData.map(
     (project: {

@@ -4,14 +4,6 @@ import { ThemeContext } from '../../context/ThemeContext';
 export default function Home() {
   const { theme } = useContext(ThemeContext);
 
-  const body = document.querySelector('body');
-  if (theme === 'light') {
-    body?.classList.add('bg-neutral-50', 'text-black');
-  } else {
-    body?.classList.remove('bg-neutral-50', 'text-black');
-    body?.classList.add('bg-black', 'text-white');
-  }
-
   return (
     <section
       id='home'
