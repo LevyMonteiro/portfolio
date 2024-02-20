@@ -1,30 +1,77 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
 
-Currently, two official plugins are available:
+This is my personal portfolio, showcasing projects and information about me, it highlights my passion for programming and my commitment to creating meaningful projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I've built this site using React and TypeScript, leveraging React Router for creating a multi-page application. 
 
-## Expanding the ESLint configuration
+I've utilized various React hooks such as useState, useEffect, and useContext to manage states and facilitate component re-renders, particularly for features like theme updates. 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Additionally, I've integrated Email.js to enable users to send messages directly to my email inbox from the website. For styling, I've employed Tailwind CSS. 
 
-- Configure the top-level `parserOptions` property like this:
+My portfolio features a responsive design, ensuring seamless functionality across multiple device sizes. 
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Demo
+
+Check out a short video demonstrating the app in action:
+
+https://github.com/LevyMonteiro/portfolio/assets/102385102/ec791e7a-12a1-4711-9bb0-fa5218ee03b1
+
+## Getting Started
+
+To view the website, simply visit the live URL <a href="https://portoflio-levymonteiro.vercel.app/" target="_blank">here</a>.
+
+If you'd like to run the website locally on your machine, you can do so by following these steps:
+
+Clone the repository to your local machine.
+
+```
+  git clone git@github.LevyMonteiro/portfolio.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Change to directory.
+
+```
+  cd portfolio
+```
+
+Install the dependecies.
+
+```
+  npm install
+```
+
+Run locally.
+
+```
+  npm run dev
+```
+
+## Built With
+
+This website was built using the following technologies:
+
+<ul>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">HTML</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">CSS</a></li>
+<li><a href="https://vitejs.dev/" target="_blank">Vite</a></li>
+<li><a href="https://react.dev/" target="_blank">React</a></li>
+<li><a href="https://typescriptlang.org/" target="_blank">Typescript</a></li>
+<li><a href="https://tailwindcss.com/" target="_blank">Tailwind</a></li>
+<li><a href="https://emailjs.com/" target="_blank">Email.js</a></li>
+<li><a href="https://lucide.dev/" target="_blank">Lucide</a></li>
+<li><a href="https://prettier.io/" target="_blank">Prettier</a></li>
+<li><a href="https://eslint.org/" target="_blank">ESLint</a></li>
+<li><a href="https://reactrouter.com/en/main" target="_blank">React Router</a></li>
+</ul>
+
+## Reference
+
+I've used as inspo the design of <a href="https://github.com/thiagocabralcorreia" target="_blank">Thiago Cabral Correia</a> <a href="https://thiagocabralcorreia.vercel.app/" target="_blank">Portfolio</a>.
+
+## Author
+
+<ul>
+<li>Levy Monteiro - <a href="https://github.com/LevyMonteiro" target="_blank">GitHub</a></li>
+</ul>
