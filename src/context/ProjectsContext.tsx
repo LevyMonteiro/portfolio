@@ -16,7 +16,7 @@ type ProjectContextProps = {
 const projectsData: ProjectContextProps[] = [
   {
     id: 'Random Quote Machine',
-    img: 'assets/img/random-quote-machine.png',
+    img: 'assets/projects/img/random-quote-machine.png',
     route: '/random-quote-machine',
     skills: ['HTML', 'CSS', 'Javascript', 'React', 'Sass', 'API'],
     about: [
@@ -25,11 +25,11 @@ const projectsData: ProjectContextProps[] = [
     ],
     deploy: 'https://random-quote-machine-levymonteiro.vercel.app/',
     repo: 'https://github.com/LevyMonteiro/random-quote-machine',
-    demo: 'assets/projects/random-quote-machine.mp4',
+    demo: 'assets/projects/videos/random-quote-machine.mp4',
   },
   {
     id: 'Social Tree',
-    img: 'assets/img/social-tree.png',
+    img: 'assets/projects/img/social-tree.png',
     route: '/social-tree',
     skills: ['HTML', 'CSS', 'Javascript', 'Vite', 'React', 'Tailwind'],
     about: [
@@ -37,11 +37,11 @@ const projectsData: ProjectContextProps[] = [
     ],
     deploy: 'https://social-tree-levymonteiro.vercel.app/',
     repo: 'https://github.com/LevyMonteiro/social-tree',
-    demo: 'assets/projects/social-tree.mp4',
+    demo: 'assets/projects/videos/social-tree.mp4',
   },
   {
     id: 'Landing Page',
-    img: 'assets/img/landing-page.png',
+    img: 'assets/projects/img/landing-page.png',
     route: '/landing-page',
     skills: ['HTML', 'CSS'],
     about: [
@@ -49,11 +49,11 @@ const projectsData: ProjectContextProps[] = [
     ],
     deploy: 'https://levymonteiro.github.io/landing-page/',
     repo: 'https://github.com/LevyMonteiro/landing-page',
-    demo: 'assets/projects/landing-page.mp4',
+    demo: 'assets/projects/videos/landing-page.mp4',
   },
   {
     id: 'Drum Machine',
-    img: 'assets/img/drum-machine.png',
+    img: 'assets/projects/img/drum-machine.png',
     route: '/drum-machine',
     skills: ['HTML', 'CSS', 'Javascript', 'Vite', 'React', 'Tailwind'],
     about: [
@@ -62,11 +62,11 @@ const projectsData: ProjectContextProps[] = [
     ],
     deploy: 'https://drum-machine-levymonteiro.vercel.app/',
     repo: 'https://github.com/LevyMonteiro/drum-machine',
-    demo: 'assets/projects/drum-machine.mp4',
+    demo: 'assets/projects/videos/drum-machine.mp4',
   },
   {
     id: 'Timer',
-    img: 'assets/img/timer.png',
+    img: 'assets/projects/img/timer.png',
     route: '/timer',
     skills: [
       'HTML',
@@ -85,11 +85,11 @@ const projectsData: ProjectContextProps[] = [
     ],
     deploy: 'https://timer-levymonteiro.vercel.app/',
     repo: 'https://github.com/LevyMonteiro/timer',
-    demo: 'assets/projects/timer.mp4',
+    demo: 'assets/projects/videos/timer.mp4',
   },
   {
     id: 'Calculator',
-    img: 'assets/img/calculator.png',
+    img: 'assets/projects/img/calculator.png',
     route: '/calculator',
     skills: ['HTML', 'CSS', 'Javascript', 'Vite', 'React', 'Tailwind'],
     about: [
@@ -99,7 +99,7 @@ const projectsData: ProjectContextProps[] = [
     ],
     deploy: 'https://calculator-levymonteiro.vercel.app/',
     repo: 'https://github.com/LevyMonteiro/calculator',
-    demo: 'assets/projects/calculator.mp4',
+    demo: 'assets/projects/videos/calculator.mp4',
   },
 ];
 
