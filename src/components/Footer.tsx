@@ -13,7 +13,7 @@ export default function Footer({ currentPage }: any) {
   const currentYear = currentDate.getFullYear();
 
   const { theme } = useContext(ThemeContext);
-  console.log(currentPage);
+
   return (
     <footer
       className={`${

@@ -46,21 +46,20 @@ export default function About() {
           </h2>
 
           <p className='text-lg opacity-85 text-center 2xl:text-left  text-white leading-7'>
-            I'm a Front-end web developer, I dedicate myself full time to
-            programming work and studies. I consider myself passionate about
-            everything that encompasses the technology area since always.
+            I'm a Front-end web developer, dedicating myself full time to
+            programming work and studies. Passionate about everything that
+            encompasses the technology area, I bring a unique perspective shaped
+            by my experiences.
           </p>
-
           <p className='text-lg opacity-85 text-center 2xl:text-left text-white leading-7'>
-            Before dedicating myself to the area I was a volunteer in the
-            technology area of my church for a few years and I also did
-            freelance work in photo shoots, filming weddings, and parties in
-            general.
+            Before diving into tech, volunteered in the technology area of my
+            church for a few years and also did freelance works in photo shoots,
+            filming weddings, and parties.
           </p>
-
           <p className='text-lg opacity-85 text-center 2xl:text-left text-white leading-7'>
-            Always excited to learn and progress. I love collaborating, feel
-            free to contact me.
+            Beyond tech, I'm passionate about sports and deeply interested in
+            Bible studies and topics. Always excited to learn and progress, I
+            love collaborating. Feel free to contact me!
           </p>
         </div>
 
