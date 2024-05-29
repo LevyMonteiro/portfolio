@@ -15,4 +15,19 @@
     html {
       @apply w-screen flex justify-center items-center overflow-x-hidden scroll-smooth font-inter;
     }
+
+    .progress-bar {
+      @apply bg-violet-700 fixed top-16 inset-x-0 h-1 origin-left;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    height: 7px;
+    width: 5px;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #6d29d9;
+    -webkit-border-radius: 1ex;
   }
