@@ -10,7 +10,12 @@ export default function Root() {
   const { scrollYProgress } = useScroll();
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ delay: 0.25 }}
+    >
       <motion.div
         style={{ scaleX: scrollYProgress }}
         className='progress-bar'
@@ -23,6 +28,6 @@ export default function Root() {
         <Contact />
       </main>
       <Footer currentPage='root' />
-    </div>
+    </motion.div>
   );
 }

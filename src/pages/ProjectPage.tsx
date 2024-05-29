@@ -1,6 +1,7 @@
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import ProjectDetail from '../components/sections/ProjectDetail';
+import { motion } from 'framer-motion';
 
 export default function ProjectPage({
   id,
@@ -18,7 +19,12 @@ export default function ProjectPage({
   demo: string;
 }) {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ delay: 0.25 }}
+    >
       <Nav currentPage='projectPage' />
       <main>
         <ProjectDetail
@@ -32,6 +38,6 @@ export default function ProjectPage({
         />
       </main>
       <Footer currentPage='projectPage' />
-    </>
+    </motion.div>
   );
 }

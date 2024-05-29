@@ -15,10 +15,47 @@ type ProjectContextProps = {
 
 const projectsData: ProjectContextProps[] = [
   {
+    id: 'Feet First',
+    img: 'assets/projects/img/feet-first.png',
+    route: '/feet-first',
+    skills: [
+      'HTML & CSS',
+      'Typescript',
+      'React',
+      'Tailwind',
+      'Next.js',
+      'NextAuth.js',
+      'Redux',
+      'API',
+      'MongoDB',
+    ],
+    about: [
+      "This project is a  modern ecommerce site! It's built with Next.js and TypeScript, styled using Tailwind CSS, and spiced up with Framer Motion for some cool animations.",
+      "We've got an admin route with a CMS to make content management super easy. The backend API is connected to MongoDB, keeping our data handling smooth and efficient. We're using Redux for state management, and NextAuth for authentication.",
+    ],
+    deploy: 'https://feet-first-levymonteiro.vercel.app/',
+    repo: 'https://github.com/LevyMonteiro/feet-first',
+    demo: 'assets/projects/videos/feet-first.mp4',
+  },
+  {
+    id: 'Carent',
+    img: 'assets/projects/img/carent.png',
+    route: '/carent',
+    skills: ['HTML & CSS', 'React', 'Next.js', 'Typescript', 'Tailwind', 'API'],
+    about: [
+      'This project is a car rental dealership landing page built with Next.js on top of React.',
+      'It features modern concepts such as pagination, a search engine with filters, and API consumption.',
+      'The design aims to be intuitive, providing users with a seamless experience.',
+    ],
+    deploy: 'https://levymonteiro.github.io/carent/',
+    repo: 'https://github.com/LevyMonteiro/carent',
+    demo: 'assets/projects/videos/carent.mp4',
+  },
+  {
     id: 'Random Quote Machine',
     img: 'assets/projects/img/random-quote-machine.png',
     route: '/random-quote-machine',
-    skills: ['HTML', 'CSS', 'Javascript', 'React', 'Sass', 'API'],
+    skills: ['HTML & CSS', 'Javascript', 'React', 'Sass', 'API'],
     about: [
       "Welcome to the Random Quote Machine, an application that generates random quotes through a dedicated quotes API. Each click on the 'New Quote' button or page reload brings a fresh perspective to your screen.",
       'This project is built with React and styled using SASS for easy maintenance and updates.',
@@ -28,34 +65,10 @@ const projectsData: ProjectContextProps[] = [
     demo: 'assets/projects/videos/random-quote-machine.mp4',
   },
   {
-    id: 'Social Tree',
-    img: 'assets/projects/img/social-tree.png',
-    route: '/social-tree',
-    skills: ['HTML', 'CSS', 'Javascript', 'Vite', 'React', 'Tailwind'],
-    about: [
-      'This is an alike linktree site, simple and functional that contain my social media and ways to contact-me.',
-    ],
-    deploy: 'https://social-tree-levymonteiro.vercel.app/',
-    repo: 'https://github.com/LevyMonteiro/social-tree',
-    demo: 'assets/projects/videos/social-tree.mp4',
-  },
-  {
-    id: 'Landing Page',
-    img: 'assets/projects/img/landing-page.png',
-    route: '/landing-page',
-    skills: ['HTML', 'CSS'],
-    about: [
-      "This is a product page that i've created to mimic a real product page of a brand.",
-    ],
-    deploy: 'https://levymonteiro.github.io/landing-page/',
-    repo: 'https://github.com/LevyMonteiro/landing-page',
-    demo: 'assets/projects/videos/landing-page.mp4',
-  },
-  {
     id: 'Drum Machine',
     img: 'assets/projects/img/drum-machine.png',
     route: '/drum-machine',
-    skills: ['HTML', 'CSS', 'Javascript', 'Vite', 'React', 'Tailwind'],
+    skills: ['HTML & CSS', 'Javascript', 'Vite', 'React', 'Tailwind'],
     about: [
       'Welcome to our drum pad machine simulator! This application provides a realistic drumming experience, allowing you to interact with drum pads effortlessly. You have the option to click on the virtual pads or use the corresponding keys on your keyboard for an immersive experience.',
       "Whether you're a music enthusiast or just looking to have some fun, our drum pad machine is designed to deliver an enjoyable and interactive experience. Start creating beats with ease, and let the rhythm flow!",
@@ -69,8 +82,7 @@ const projectsData: ProjectContextProps[] = [
     img: 'assets/projects/img/timer.png',
     route: '/timer',
     skills: [
-      'HTML',
-      'CSS',
+      'HTML & CSS',
       'Javascript',
       'Vite',
       'React',
