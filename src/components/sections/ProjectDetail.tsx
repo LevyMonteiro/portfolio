@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import { Globe, Github } from 'lucide-react';
 import Card from '../Card';
+import Footer from '../Footer';
 
 export default function ProjectDetail({
   id,
@@ -24,11 +25,11 @@ export default function ProjectDetail({
     <section
       className={`${
         theme === 'light' ? ' bg-neutral-50 text-black' : 'bg-black text-white'
-      } w-screen min-h-screen flex flex-col items-center px-8 md:px-12`}
+      } w-screen min-h-full flex flex-col items-center px-8 md:px-12`}
     >
       <div
         id='project-container'
-        className='w-full 2xl:w-[1184px] h-min flex flex-col gap-8 pt-28 pb-12 xl:flex-row'
+        className='w-full 2xl:w-[1184px] h-min flex flex-col gap-8 pt-28 xl:flex-row'
       >
         <div
           id='col1'
@@ -114,6 +115,8 @@ export default function ProjectDetail({
           <video src={demo} className='w-full md:w-11/12' controls></video>
         </div>
       </div>
+
+      <Footer />
     </section>
   );
 }

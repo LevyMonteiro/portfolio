@@ -1,5 +1,4 @@
 import Nav from '../components/Nav';
-import Footer from '../components/Footer';
 import ProjectDetail from '../components/sections/ProjectDetail';
 import { motion } from 'framer-motion';
 
@@ -37,7 +36,6 @@ export default function ProjectPage({
           demo={demo}
         />
       </main>
-      <Footer currentPage='projectPage' />
     </motion.div>
   );
 }
