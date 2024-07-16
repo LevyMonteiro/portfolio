@@ -116,7 +116,7 @@ export default function ProjectDetail({
         </div>
       </div>
 
-      <Footer />
+      <Footer currentPage='projectPage' />
     </section>
   );
 }
